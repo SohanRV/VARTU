@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Varthu | Machine Rentals</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mobile.css" media="only screen and (max-width: 768px)" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <script src="gallery.js"></script>
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #AFDDE5, #0FA4AF);
+      color: #003135;
+    }
+
+    .navbar, footer {
+      background: #024950;
+    }
+
+    .hero-content h1 {
+      color: #0FA4AF;
+    }
+
+    .tagline {
+      color: #003135;
+    }
+
+    .rental-section {
+      background: #AFDDE5;
+    }
+
+    .glow-button {
+      background: linear-gradient(to right, #0FA4AF, #024950);
+      color: #fff;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 0 10px rgba(15, 164, 175, 0.6), 0 0 20px rgba(2, 73, 80, 0.4);
+    }
+
+    .glow-button:hover {
+      transform: scale(1.05);
+      background: #964734;
+      box-shadow: 0 0 15px rgba(150, 71, 52, 0.8), 0 0 25px rgba(150, 71, 52, 0.6);
+    }
+
+    .machine-card {
+      background-color: #ffffff;
+      color: #003135;
+    }
+
+    .modal-content-wrapper {
+      background-color: #AFDDE5;
+    }
+
+    .cta-button {
+      background-color: #964734;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      display: inline-block;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #0FA4AF;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ✅ NAVIGATION BAR START -->
+<nav class="navbar">
+  <div class="logo">
+    <img src="assets/Vartu Logo.png" alt="Varthu Logo" />
+  </div>
+  <div class="login-buttons">
+    <a href="customer-login.html">Customer</a>
+    <a href="admin-login.html">Admin</a>
+    <a href="operations-login.html">Operations</a>
+  </div>
+</nav>
+<!-- ✅ NAVIGATION BAR END -->
+
+<header class="hero">
+  <div class="hero-content">
+    <h1>VARTU</h1>
+    <p class="tagline">Waste Processing Machines On Rentals</p>
+  </div>
+</header>
+
+
+
+  <div class="modal">
+  <div class="modal-content-wrapper">
+    <span class="close">&times;</span>
+    <!-- your image or video here -->
+  </div>
+</div>
+
+
+  <section class="rental-section">
+  <div class="rental-container">
+    <div class="rental-column">
+      <h2>Daily Rentals</h2>
+      <ul>
+        <li class="glow-button" onclick="openModalByName('KATRAN AWS')">KATRAN AWS</li>
+        <li class="glow-button" onclick="openModalByName('D Leaf 505')">D Leaf 505</li>
+        <li class="glow-button" onclick="openModalByName('KATRAN REPLAST 300')">KATRAN REPLAST 300</li>
+      </ul>
+    </div>
+    <div class="rental-column">
+      <h2>Weekly Rentals</h2>
+      <ul>
+        <li class="glow-button" onclick="openModalByName('D Leaf 202')">D Leaf 202</li>
+        <li class="glow-button" onclick="openModalByName('D Leaf 303')">D Leaf 303</li>
+        <li class="glow-button" onclick="openModalByName('D Leaf 505')">D Leaf 505</li>
+        <li class="glow-button" onclick="openModalByName('KATRAN AWS')">KATRAN AWS</li>
+      </ul>
+    </div>
+    <div class="rental-column">
+      <h2>Long Term Rentals</h2>
+      <ul>
+        <li class="glow-button" onclick="openModalByName('D Leaf 202')">D Leaf 202</li>
+        <li class="glow-button" onclick="openModalByName('D Leaf 303')">D Leaf 303</li>
+        <li class="glow-button" onclick="openModalByName('Compost Hut')">Compost Hut</li>
+        <li class="glow-button" onclick="openModalByName('KATRAN REPLAST 300')">KATRAN REPLAST 300</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+  <section id="about">
+  <div class="container">
+    <h2>ABOUT VARTU</h2>
+    <p>Vartu provides eco-friendly composting and waste management machines for rent.</p>
+    <p>We serve construction sites, apartments, industries, and more across Bangalore.</p>
+  </div>
+</section>
+
+ 
+
+  <section id="machines">
+    <div class="container">
+      <h2>OUR MACHINES</h2>
+      <div class="machines-grid">
+        <div class="machine-card">
+          <img src="assets/Compost Hut.png" alt="Machine 1" />
+          <h3>COMPOST HUT</h3>
+          <p>Processes up to 200kg of waste per day — perfect for medium-scale locations.</p>
+        </div>
+        <div class="machine-card">
+          <img src="assets/Dleaf202.jpg" alt="Machine 2" />
+          <h3>KATRAN D-Leaf 202</h3>
+          <p>Effortless dry leaf shredding — compact, efficient, and perfect for daily garden waste.</p>
+        </div>
+        <div class="machine-card">
+          <img src="assets/KatranDleaf303.png" alt="Machine 3" />
+          <h3>KATRAN D-Leaf 303</h3>
+          <p>Shreds dry leaves fast — built for mid-scale composting setups.</p>
+        </div>
+        <div class="machine-card">
+          <img src="assets/KatranDleaf505.jpg" alt="Machine 4" />
+          <h3>KATRAN D-Leaf 505</h3>
+          <p>Built for big loads — the go-to machine for large-scale dry leaf management.</p>
+        </div>
+        <div class="machine-card">
+          <img src="assets/Katran AWS.png" alt="Machine 5" />
+          <h3>KATRAN AWS</h3>
+          <p>Handles bulk waste in any season — the industrial workhorse for relentless shredding.</p>
+        </div>
+        <div class="machine-card">
+          <img src="assets/Katran Replast.png" alt="Machine 6" />
+          <h3>KATRAN Replast</h3>
+          <p>Engineered to shred plastic waste with ease — ideal for recycling and volume reduction.</p>
+        </div>
+        <div class="machine-card">
+          <img src="assets/Mini Bin.png" alt="Machine 7" />
+          <h3>Mini Bin</h3>
+          <p>Compact composter for everyday use.</p>
+        </div>
+        <div class="machine-card">
+          <img src="assets/KatranOWC.png" alt="Machine 8" />
+          <h3>KATRAN OWC</h3>
+          <p>Efficient organic waste shredder — built for daily composting needs.</p>
+        </div>
+        </div>
+        <div class="machine-card">
+          <img src="assets/Katran Crux4T.jpg" alt="Machine 9" />
+          <h3>KATRAN CRUX-4T</h3>
+          <p>Crushes food waste into fine pulp for easy composting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="media-gallery">
+  <h2>OUR WORK IN ACTION</h2>
+  <div class="gallery-scroll">
+    <div class="media-item">
+      <img src="assets/D1.png" onclick="openModal(this)" alt="Demo Photo 1">
+    </div>
+    <div class="media-item">
+      <img src="assets/D2.png" onclick="openModal(this)" alt="Demo Photo 1">
+    </div>
+    <div class="media-item">
+      <img src="assets/D3.png" onclick="openModal(this)" alt="Demo Photo 1">
+    </div>
+    <div class="media-item">
+      <img src="assets/D4.png" onclick="openModal(this)" alt="Demo Photo 1">
+    </div>
+    <div class="media-item">
+      <img src="assets/D5.png" onclick="openModal(this)" alt="Demo Photo 1">
+    </div>
+    <div class="media-item">
+      <img src="assets/D6.png" onclick="openModal(this)" alt="Demo Photo 1">
+    </div>
+    <div class="media-item">
+      <img src="assets/D7.jpg" onclick="openModal(this)" alt="Demo Photo 1">
+    </div>
+    <div class="media-item">
+      <img src="assets/D8.jpg" onclick="openModal(this)" alt="Demo Photo 1">
+    </div>
+    <div class="media-item">
+      <img src="assets/D9.jpg" onclick="openModal(this)" alt="Demo Photo 1">
+    </div>
+    <div class="media-item">
+      <img src="assets/D10.png" onclick="openModal(this)" alt="Demo Photo 1">
+    </div>
+    <div class="media-item">
+      <video src="assets/" onclick="openModal(this)" muted></video>
+    </div>
+    <!-- Add more items as needed -->
+  </div>
+</section>
+
+<!-- Lightbox Modal -->
+<div id="modal" class="media-modal" onclick="closeModal()">
+  <span class="close-btn">&times;</span>
+  <div class="modal-content"></div>
+</div>
+
+  <section id="contact">
+    <div class="container">
+      <h2>CONTACT US</h2>
+      <p>📞 +91-8062182015 | 📧 contact@bhuyantra.com</p>
+      <a href="https://wa.me/+918062182015" target="_blank" class="cta-button">WhatsApp Now</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Vartu. Built for a greener tomorrow 🌱</p>
+    </div>
+  </footer>
+
+</body>
+</html>
