@@ -1,0 +1,1 @@
+-- VARTU Site Is Ready --
